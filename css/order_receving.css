@@ -1,0 +1,54 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "微软雅黑"; }
+
+html {
+  font-size: 25px; }
+
+#order_article {
+  background: #eff0ef;
+  width: 100%; }
+  #order_article .global {
+    width: 14.2rem;
+    margin: 0.14rem auto 0 auto;
+    padding-top: 0.52rem; }
+    #order_article .global .green {
+      width: 14.24rem;
+      height: 8.6rem;
+      background: white;
+      border: 1px solid #a0a0a0;
+      margin-bottom: 0.64rem; }
+      #order_article .global .green ul {
+        margin: 0.64rem auto 0.46rem auto;
+        text-align: center; }
+        #order_article .global .green ul li:nth-child(1) {
+          margin-bottom: 0.3rem; }
+          #order_article .global .green ul li:nth-child(1) img {
+            width: 4.04rem;
+            height: 2rem; }
+        #order_article .global .green ul li:nth-child(2) {
+          font-size: 0.76rem;
+          font-weight: bold;
+          margin-bottom: 0.64rem; }
+        #order_article .global .green ul li:nth-child(3) {
+          font-size: 0.28rem;
+          margin-bottom: 0.32rem; }
+        #order_article .global .green ul li:nth-child(4) {
+          font-size: 0.28rem;
+          margin-bottom: 0.32rem; }
+        #order_article .global .green ul li:nth-child(5) {
+          font-size: 0.56rem;
+          font-weight: bold;
+          width: 5.7rem;
+          height: 1.2rem;
+          background: #e90101;
+          text-align: center;
+          line-height: 1.2rem;
+          color: white;
+          margin-left: 4.24rem; }
+
+/*# sourceMappingURL=order_receving.css.map */

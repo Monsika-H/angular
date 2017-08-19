@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1" />
+		<meta name="format-detection" content="telephone=no email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/libs/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/GuidePage.css"/>
+		<title>引导页</title>		
+	</head>
+	<body>
+		<div id="guide">
+			<img src="../images/welcome.png" />
+		</div>
+		<div class="swiper-container guide-green">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../images/guide4-1.png"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="../images/guide5-1.png"/>
+				</div>
+				<div class="swiper-slide come-in">
+					<img src="../images/guide3-1.png"/>
+					<div class="lgn"><a href="main.html">立即体验</a></div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script src="../js/libs/swiper.min.js"></script>
+		<script src="../js/libs/jquery.3.1.1.js"></script>
+		<script>
+			//轮播图
+			var mySwiper = new Swiper('.guide-green',{
+				loop:true,
+				autoplay:4000,
+				pagination:'.swiper-pagination',
+				paginationClickable:true
+			})
+			
+			//三秒进入轮播引导页
+			var timer = setInterval(fn,3000);
+			function fn(){
+				guide.style.display = 'none';
+			}
+			
+			//文字自适应
+			(function() {
+				function changeSize() {
+					document.documentElement.style.fontSize = 25 * document.documentElement.clientWidth / 375 + "px";
+				}
+				changeSize();
+				window.addEventListener("resize", changeSize, false);
+			})();
+		</script>
+	</body>
+</html>

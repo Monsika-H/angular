@@ -1,0 +1,77 @@
+var app = angular.module('app', ['ui.router']);
+app.config(function($urlRouterProvider,$stateProvider) {
+	$urlRouterProvider.otherwise('first_page');
+	$stateProvider.state('first_page',{
+		url:'/first_page',
+		templateUrl:'new.html',
+		controller:function($state){
+			$state.go('first_page.news')
+		}
+	}).state('first_page.news',{
+		url:'/news',
+		templateUrl:'news.html'
+	}).state('first_page.nearby',{
+		url:'/nearby',
+		templateUrl:'nearby.html'
+	}).state('order_receiving',{
+		url:'/order_receiving',
+		templateUrl:'new2.html',
+		controller:function($state){
+			$state.go('order_receiving.join')
+		}
+	}).state('order_receiving.join',{
+		url:'/join',
+		templateUrl:'join.html'
+	}).state('order_receiving.work',{
+		url:'/work',
+		templateUrl:'work.html'
+	}).state('order_receiving.div',{
+		url:'/div',
+		templateUrl:'div.html'
+	}).state('trends',{
+		url:'/trends',
+		templateUrl:'new3.html',
+		controller:function($state){
+			$state.go('trends.dt')
+		}
+	}).state('trends.dt',{
+		url:'/dt',
+		templateUrl:'dt.html',
+		controller:function($state){
+			$state.go('trends.dt.msg')
+		}
+	}).state('trends.dt.msg',{
+		url:'/msg',
+		templateUrl:'msg.html'
+	})
+	.state('trends.dt.enjoy',{
+		url:'/enjoy',
+		templateUrl:'enjoy.html'
+	})
+	.state('trends.dt.friend',{
+		url:'/friend',
+		templateUrl:'friend.html'
+	}).state('trends.fj',{
+		url:'/fj',
+		templateUrl:'fj.html'
+	}).state('my',{
+		url:'/my',
+		templateUrl:'new4.html',
+		controller:function($state){
+			$state.go('my.money')
+		}
+	}).state('my.money',{
+		url:'/money',
+		templateUrl:'money.html'
+	}).state('my.add',{
+		url:'/add',
+		templateUrl:'add.html'
+	}).state('my.in',{
+		url:'/in',
+		templateUrl:'in.html'
+	})
+	
+})
+app.controller('ctrl', function($scope) {
+	
+});
